@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  
+}
+
+.container{
+    width: 100%;
+    height:100vh;
+    background: 
+    linear-gradient(to top, rgb(7, 7, 7), transparent),
+    url(https://4kwallpapers.com/images/wallpapers/call-of-duty-modern-warfare-2-2022-games-call-of-duty-3840x2160-8571.jpg);
+    background-size: 1px 100%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container form{
+    width: 30%;
+    height: 80%;
+    padding: 50px 30px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    box-shadow: 4px 0 20px rgb(243, 243, 243);
+    position: relative;
+}
+
+.fa-paper-plane{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(247, 232, 232);
+    font-size: 26px;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-group{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+   
+}
+
+.input-group label{
+    flex-basis: 28%;
+    color: black;
+}
+
+.input-group input, .input-group textarea{
+    flex-basis: 68%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #999;
+    color: rgb(20, 25, 36);
+    font-size: 16px;
+}
+
+/*::is a pseudo-element selector in CSS that targets the placeholder text of an input element. 
+Placeholder text is the text that appears in an input field before the user enters any value */
+::placeholder{
+    font-size: 14px;
+    color: black;
+}
+
+.register p{
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 1% 0 0 20%;
+
+} 
+
+.register button{
+    background: transparent;
+    color: black;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 70%;
+    /* block display allows the buttons to take the full width of their parent containers and stacking vertically. */
+    display: block;
+    margin: 10px auto 10px;
+}
+
+.register button:hover{
+    background: rgba(172, 169, 169, 0.9);
+}
+
+.register a{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+.submit button{
+    background: transparent;
+    color: black;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px;
+}
+
+.submit button:hover{
+    background: rgba(30, 248, 30, 0.5);
+    color: black;
+}
+
+.input-group span{
+    position: absolute;
+    bottom: 12px;
+    right: 17px;
+    color: rgb(247, 49, 49);
+}
+
+#submit-error{
+    color: rgb(247, 49, 49);
+}
+
+.input-group span i{
+    color: seagreen ;
+}
+
+@media (max-width: 700px){
+    .container form{
+        width: 80%;
+        height: 100vh;
+        margin-top: 10vh;
+    }
+    /* .input-group{
+        width: 50%;
+       
+    } */
+    
+    .input-group label{
+        flex-basis: 10%;
+    }
+    .input-group input, .input-group textarea{
+        flex-wrap: wrap;
+    }
+}

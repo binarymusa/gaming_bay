@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration-form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/registration.css') }}">
+</head>
+
+<body>
+  
+    <div class="container">
+        <form action="">
+          <i class="fas fa-paper-plane"></i>
+    
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()">
+            <span id="name-error"></span>
+          </div>
+    
+          <div class="input-group">
+            <label>Phone No.</label>
+            <input type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="validatephone()">
+            <span id="phone-error"></span>
+          </div>
+    
+          <div class="input-group">
+            <label>Email Id</label>
+            <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
+            <span id="email-error"></span>
+          </div>   
+
+          <div class="input-group">
+            <label>Password</label>
+            <input type="passwd" placeholder="123password" id="contact-password" onkeyup="validatepassword()">
+            <span id="Password-error"></span>
+          </div>
+
+          <div class="input-group">
+            <label>Confirm Password</label>
+            <input type="passwd2" placeholder="123password" id="contact-password2" onkeyup="validatepassword2()">
+            <span id="Password2-error"></span>
+          </div>
+    
+        
+        <button onclick="return validateform()">Submit</button>
+        <span id="submit-error"></span>
+       
+        <div class="register">
+          <p>Already have an account?</p>
+          <button ><a href="{{ url_for('login_page')}}">Login</a></button>
+        </div>
+
+        </form>
+    
+      </div>
+    
+      <script src="{{ url_for('static', filename='javascript/login.js') }}"></script>
+
+</body>
+</html>

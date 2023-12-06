@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home-page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+    <section class="content">
+
+        <nav class="nav" >
+            <i class="fa fa-times" onclick="hideMenu()" ></i>
+            <ul>
+                <li><a href="{{ url_for('home_page')}}">Home</a></li>
+                <li><a href="{{ url_for('About_page')}}">About</a></li>
+                <li><a href="{{ url_for('Bookings_page')}}">Bookings</a></li>
+                <li><a href="{{ url_for('login_page')}}">Login</a></li>
+                <li><a href="{{ url_for('Register_page')}}">Sign Up</a></li>
+            </ul>
+        </nav>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      
+
+        <div class="intro">          
+            <p>
+                <h2>CALLING OUT ALL GAMERS</h2>
+                Take your gaming experience to another level!.
+                Discover a vast library of games across all genres<br>
+                From thrilling shooters to immersive RPGs,Racing and the almighty fifa.
+                Enjoy exclusive perks, bonuses, and rewards as a valued member of our gaming community
+            </p>
+        </div>
+
+        <button class="start">
+            <a href="{{ url_for('About_page') }}">Get Started</a>
+        </button> 
+
+    </section>
+    
+    <section class="footer">
+        
+        <div class="row">
+            <div class="foot-column">
+                <p>
+                    <h3> Join the club</h3>
+                    For any enquiries,contact us using the social platforms
+                    provided
+                </p>
+            </div>
+
+            <div class="foot-column">
+                <p>
+                    <h3> Join the club</h3>
+                    For any enquiries,contact us using the social platforms
+                    provided
+                </p>
+                 <!-- <div class="icons">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>  -->
+            </div>
+        </div>
+        
+    </section>
+    
+    <script src="{{ url_for('static', filename='javascript/home.js') }}"></script>
+
+</body>
+</html>
