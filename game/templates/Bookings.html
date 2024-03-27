@@ -1,0 +1,102 @@
+
+{%extends 'base.html'%}
+{% block title %}
+    Bookings page
+{% endblock %}
+
+{%block content%}
+
+  <div class="container-fluid bg-dark text-light p-2 pb-5">
+
+      <form method="POST" class="form-signin text-align width-4 mt-2 bg-cust-3 w-cust-2  mx-cust" id="border-6">
+          {{ form.hidden_tag() }}
+            <h1 class="h3 mb-3 font-weight-normal">
+              Book a gaming session
+            </h1>
+            
+              <div class="card  my-1 mx-cust " style="width: inherit;">
+                  <div class="card-body bg-cust-6 px-lg-5">
+                      <h5 class="card-title cust-css-4" >Select Games</h5>
+                      {% for game in games %}
+                          <div class="form-check">
+                              <input class="form-check-input" type="checkbox" name="games" value="{{ game.id }}"  id="textboxalter">  <!-- javascript used ,. bookings.js -->
+                              <!-- onchange="limitGamesSelection()"  -->
+                              <label class="form-check-label pt-3">{{ game.name }} : {{game.description}} </label>
+                          </div>                          
+                      {% endfor %}
+                      <div class="bg-danger-subtle mt-lg-3 margin-l2" style="width: inherit;">
+                        <h4>Note:</h4>
+                        <ol class="bg-cust-3 text-white">
+                          <li>Select only 3 games</li> 
+                          <li>More games coming soon</li> 
+                        </ol>               
+                      </div>
+                  
+                  </div>
+              </div>
+          
+              <div class="card  my-1 mx-cust" style="width: inherit;">
+                  <div class="card-body bg-cust-6">
+                      <h5 class="card-title cust-css-4">Select Console</h5>
+                      {% for console in consoles %}
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="console" value="{{ console.id }}">
+                              <label class="form-check-label pt-2">{{ console.console_name }} : {{console.description}} </label>
+                          </div>
+                      {% endfor %}
+                  </div>
+              </div>
+          
+              <div class="card my-1 mx-cust" style="width: inherit;">
+                  <div class="card-body bg-cust-6">
+                      <h5 class="card-title cust-css-4">Select Time Slot</h5>
+                      {% for timeslot in timeslots %}
+                          <div class="form-check">
+                              <input class="form-check-input" type="radio" name="timeslot" value="{{ timeslot.id }}">
+                              <label class="form-check-label pt-2">Start time: {{ timeslot.start_time }} - End time: {{ timeslot.end_time }}</label>
+                          </div>
+                      {% endfor %}
+                  </div>
+              </div>
+
+              <div class="card my-1 mx-cust" style="width: inherit;">
+                <div class="card-body bg-cust-6">
+                    <h5 class="card-title cust-css-4">Select Date slot</h5>
+                    {% for dateslot in dateslots %}
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="dateslot" value="{{ dateslot.id }}">
+                            <label class="form-check-label">{{ dateslot.date_slot}}</label>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+              <div class="pb-2">{{ form.submit(class="btn btn-lg btn-block btn-primary")}}</div>          
+
+        </form>
+  </div>
+{%endblock%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

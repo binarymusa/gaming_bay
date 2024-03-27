@@ -1,0 +1,52 @@
+
+{%extends 'base.html' %}
+{% block title %}
+    Register page
+{% endblock %}
+
+{% block content %}
+
+
+<div class="container-fluid bg-dark text-light pt-5 pb-5">
+
+  <form method="POST" class="form-signin text-align w-cust-1 mx-cust-3 bg-cust-3" id="border-6">
+    {{ form.hidden_tag() }}
+    <h1 class="h3 mb-3 font-weight-normal">
+      Please signup
+    </h1>
+    
+    {{ form.username.label() }}
+    <div class="m-1">{{ form.username(class="form-control", placeholder="Username") }}</div>
+    
+    <br>
+    {{ form.phone_no.label() }}
+    <div class="m-1">{{ form.phone_no(class="form-control", placeholder="Phone-no") }}</div>
+    
+    <br>
+    {{ form.email.label() }}
+    <div class="m-1">{{ form.email(class="form-control", placeholder="Email") }}</div>
+    
+    <br>
+    {{ form.password1.label() }}
+    <div class="m-1">{{ form.password1(class="form-control", placeholder="password") }}</div>
+    
+    {{ form.password2.label() }}
+    <div class="m-1">{{ form.password2(class="form-control", placeholder="Confirm password") }}</div>
+    
+
+    <div class="checkbox mb-3">
+      <h6>Already have an account?</h6>
+      <a class="btn btn-secondary m-3" href="{{ url_for('login_page')}}">Login</a>
+   </div>
+
+   <div class="pb-2">{{ form.submit(class="btn btn-lg btn-block btn-primary")}}</div>
+
+  </form>
+
+</div>
+
+ 
+    
+      <script src="{{ url_for('static', filename='javascript/login.js') }}"></script>
+
+{% endblock %}

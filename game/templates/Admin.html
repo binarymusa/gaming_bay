@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin page</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/mediaquery.css') }}">
+        <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    </head>
+
+    <nav class="navbar navbar-expand-md  bg-dark font-monospace" style="border-bottom: 1px solid #dfcfcfdc;">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand text-success mx-3" href="#">Admin Panel</a>
+
+        <div class="collapse navbar-collapse mx-2 rounded-1 bg-cust-3" id="navbarNav">
+        
+            <ul class="navbar-nav m-2 px-4  rounded-1" style="border: 2px solid #dfcfcfdc;">
+
+                <li class="nav-item ">
+                    <a class="nav-link"style="color: antiquewhite;" href="{{ url_for('Admin_page')}}"> 
+                        Home 
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: antiquewhite;" href="#">
+                        Users
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"style="color: antiquewhite;" href="#">
+                        Settings
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ms-auto px-2">
+                <li class="nav-item bg-danger rounded-1">
+                    <a class="nav-link " href="{{ url_for('logout_page') }}">
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+    </nav>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{category}} mt-1 w-cust-3 m-cust-1" id="position-1" style="padding-left: 5%;" >
+                    <button class="rounded-5" type="button" class="m1-2 mb-1 close" data-bs-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{ message }}
+                    
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <body>
+       
+        <section class="container-fluid bg-cust-9">
+    
+            <div class="pb-cust-1">
+                <h3
+                class="font-monospace py-2 px-2 rounded border-success cust-css-8">
+                    Clcik to work with the menus
+                </h3>
+            </div>
+
+            <div class="row" style="padding: 3vh 0 15vh 0"> 
+                <div class="col-lg-4 pb-sm-2 down">
+                    <a class="nav-link rounded-1 height-8 bg-dark" id="cust-css-6" href="{{ url_for('Admin_page') }}" >
+                        <h3 class="font-monospace cust-css-7">Home</h3>
+                    </a>
+                </div>
+                
+                <div class="col-lg-4 pb-sm-2 down">
+                    <a class="nav-link  rounded-1 height-8 bg-dark" id="cust-css-6" href="#">
+                        <h3 class="font-monospace cust-css-7">Users</h3>
+                    </a>
+                </div>
+               
+                <div class="col-lg-4 pb-sm-2 pb-md-1 down">
+                    <a class="nav-link rounded-1 height-8 bg-dark" id="cust-css-6" href="#">
+                        <h3 class="font-monospace cust-css-7">Settings</h3>
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+ 
+        <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        
+    </body>
+</html>
+
+
+   
+    

@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+{% block title %}
+   Enrolls page
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluid bg-dark pb-1 font-monospace">
+        <div class="nav-bar bg-cust-4 cust-css-2 w-cust-2  px-2">
+            <h3>My submisions</h3>
+        </div>
+    
+        <div class="card my-1 pb-2 mb-1 px-lg-5 bg-cust-4 border rounded-1" style="border: solid #dfcfcfdc;">
+            <div class="row card-body bg-cust-6 rounded-1 border-danger">
+                <h3 class="card-title text-center" style="text-decoration: 2px overline;">{{ current_user.username.upper() }}</h3>
+                {% for booked_item  in booked_user %}
+                    <div class="col px-lg-5 py-lg-4" style="border-right: 2px  solid #242323cc;">
+                        <label class="py-1"> Games booked : {{ booked_item.game_id }}</label> 
+                        <label class="py-1"> Console booked : {{ booked_item.console_id }}</label> 
+                        <label class="py-1"> Date booked : {{ booked_item.date_id }}</label> <br>
+                        <label class="py-1"> Time booked : {{ booked_item.time_id }}</label> <br>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+  
+{%endblock%}

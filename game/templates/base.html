@@ -1,0 +1,189 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/mediaquery.css') }}">
+      <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+      
+      <title>
+          {% block title %}
+                Base page
+          {% endblock %}
+      </title>
+   </head>
+
+
+    <body>
+        
+        <nav class="navbar navbar-expand-md navbar-dark font-monospace pt-3 pb-3">
+            <button class="navbar-toggler mx-2" type="button" data-toggle="collapse"  data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="font-monospace cust-css-2 px-1">
+                <h4>
+                    -PRIMAL TITAN-
+                </h4>
+               
+            </div>
+            
+            <div class="collapse navbar-collapse m-1 rounded-1 bg-cust-3" id="navbarNav">
+
+                {% if current_user.is_authenticated %}
+                
+                    <ul class="navbar-nav m-2 px-lg-4 cust-css-2 rounded-1" style="border: 2px solid #dfcfcfdc;">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('home_page')}}">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ url_for('About_page')}}">
+                                Multiverse
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('Bookings_page')}}">
+                                Bookings
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="#dfcfcfdc" class="bi bi-journal-album" viewBox="0 0 16 16">
+                                    <path d="M5.5 4a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5zm1 7a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
+                                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                   
+
+                    <ul class="navbar-nav ms-auto px-2 rounded-5" id="mx-cust-1">
+                        
+                            <div class="btn-group">
+                                <button class="btn dropdown-toggle text-black bg-cust-7" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="" >
+                                    <!-- <span class="caret"></span> -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="#dfcfcfdc" class="bi bi-person-fill" viewBox="0 0 16 16">
+                                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                                    </svg>    
+                                </button>
+                                
+                                <ul class="dropdown-menu bg-dark cust-css-2 p-2">
+                                    <li class="" >
+                                        <a class="disabled nav-link text-success" >
+                                            -   {{ current_user.username.upper() }} -
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="">
+                                        <a class="nav-link" href="{{ url_for('profile_page')}}" >
+                                            My profile
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a class="nav-link" href="{{ url_for('submissions_page')}}" >
+                                        My Enrolls
+                                        </a>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="text-bg-danger" id="cust-txtclr-1">
+                                        <a  class="nav-link" href="{{ url_for('logout_page') }}">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                    </ul>
+                
+                
+                {% else %}
+                    <ul class="navbar-nav m-2 px-lg-4 cust-css-2  rounded-1" style="border: 2px solid #dfcfcfdc;">
+                        <!-- <li class="nav-item" id="icon"><i class="fa fa-times" onclick="hideMenu()"></i></li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('home_page')}}">                            
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{ url_for('About_page')}}">
+                                Multiverse
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('Bookings_page')}}">
+                                Bookings
+                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="#dfcfcfdc" class="bi bi-journal-album" viewBox="0 0 16 16">
+                                    <path d="M5.5 4a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5zm1 7a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
+                                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
+                                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav ms-auto mt-2 mb-1 px-lg-3 bg-cust-4 rounded-2 cust-css-2" style="border: 2px solid #dfcfcfdc;">
+
+                        <!--  -->
+                            <li>
+                                <a class="nav-link"  href="{{ url_for('login_page')}}">
+                                    Login
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link"  href="{{ url_for('Register_page')}}">
+                                    Register
+                                </a>
+                            </li>
+                            <!-- <a class="nav-link dropdown-toggle" id="text-color" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Others
+                            </a>
+                            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item bg-success text-light" href="{{ url_for('login_page')}}">Login</a></li>
+                            <li><a class="dropdown-item bg-dark text-light" href="{{ url_for('Register_page')}}">Register</a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                {% endif %}
+
+            </div>
+        </nav>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{category}} mt-1 w-cust-3 m-cust-1 pb-cust-2" id="position-1">
+                        <button class="rounded-5" type="button" class="m1-2 mb-1 close" data-bs-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        {{ message }}
+                        
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+       
+        <main>
+
+            {% block content %}
+
+            
+            {% endblock %}
+
+            <footer class="bg-dark text-white height-7 font font-monospace pt-lg-4 pt-md-3 cust-css-5">
+                <p>&copy; 2024 Primal Titan</p>
+            </footer>
+          
+        </main>
+        
+        <script src="{{ url_for('static', filename='javascript/home.js') }}"></script>
+        <script src="{{ url_for('static', filename='javascript/bookings.js') }}"></script>
+        <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        
+    </body>
+</html>

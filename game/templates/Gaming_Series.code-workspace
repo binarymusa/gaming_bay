@@ -1,0 +1,58 @@
+{
+	"folders": [
+		{
+			"name": "Gaming_Series",
+			"path": "../.."
+		},
+		{
+			"name": "FlasK_Series",
+			"path": "../../../FlasK_Series"
+		},
+		{
+			"name": "p_programs",
+			"path": "../../../p_programs"
+		},
+		{
+			"name": "java",
+			"path": "../../../java"
+		},
+		{
+			"name": "CPP",
+			"path": "../../../CPP"
+		},
+		{
+			"path": "../../../html"
+		},
+		{
+			"path": "../../../kangiga Oasis"
+		},
+		{
+			"path": "../../../../Downloads/Document from Mose (modified)"
+		},
+		{
+			"path": "../../../PrimalTitan"
+		},
+		{
+			"path": "../../../Dart"
+		}
+	],
+	"settings": {
+		"sqltools.connections": [
+			{
+				"mysqlOptions": {
+					"authProtocol": "default",
+					"enableSsl": "Disabled"
+				},
+				"previewLimit": 50,
+				"server": "localhost",
+				"port": 3306,
+				"driver": "MySQL",
+				"name": "connection01",
+				"database": "DB_01",
+				"username": "MUSTAFA",
+				"password": "5m9l<18>_X!"
+			}
+		],
+		"liveServer.settings.multiRootWorkspaceName": "Gaming_Series"
+	}
+}

@@ -1,0 +1,19 @@
+
+{% extends 'base.html' %}
+{% block title %}
+    Welcome page
+{% endblock %}
+
+{%block content%}
+    <div class="container-fluid bg-dark padding-1">
+       <div class=" bg-cust-3 w-75 m-cust-l3 font-monospace"  id="border-02" >
+            <div class=" rounded-2 pb-4 pt-1 bg-cust-5 w-cust-5 mx-cust-5 text-align cust-css-2" id="border-9">
+                <h1 style="padding-top: 5vh;">PRIMAL TITAN GAMING BAY</h1>
+                <div>
+                    <a class="btn border-dark m-3 p-3 px-lg-5 px-sm-3" style=" background-color:  #dfcfcfdc;font-size: larger;" href="{{ url_for('home_page')}}">Visit</a>
+                </div>
+            </div>
+       </div>
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,324 @@
+/* use % for width and vh for  height */
+/* disclaimer: bootstrap does not allow manipulation of margin from external css classes */
+
+/* all pages css ------------------------------- */
+
+/* custom mixed css items */
+.cust-css{
+    border-left: solid rgba(241, 217, 217, 0.774) 2px;
+    margin-left: 5%;
+}
+.cust-css-1{
+    margin: 30vh 0 0 0;
+    color: rgba(255, 255, 255, 0.719);
+    font-size: 25px;
+}
+.cust-css-3{
+    height: 75vh;
+}
+.cust-css-4{
+    text-decoration: 2px #bdb9b9 overline;
+    padding-top: 0.5px;
+}
+.cust-css-5{
+    color: #dfcfcfdc;
+    text-align: center;
+    font-size: larger;
+}
+#cust-css-6{
+    /* width: 30%; */
+    /* box-shadow: 0 0 5px 0 white; */
+    /* background-image: url(/static/img2/codmw3.jpg); */
+   /*  background: linear-gradient(to bottom, rgba(15, 14, 14, 0.26), transparent),
+    linear-gradient(to top, rgba(22, 77, 94, 0.356), transparent); */
+    background-repeat: no-repeat;background-size: cover;
+    animation: shake 10s linear 3 2s;
+}
+.cust-css-7{
+    padding: 25vh 0 0 35%;
+    color: antiquewhite;
+}
+.cust-css-8{
+    border: 2px solid;
+    height: fit-content;
+    width: fit-content;
+}
+
+/* custom paddings id's n classes */
+.pb-cust{
+    padding-bottom: 1.4vh;
+}
+.pb-cust-1{
+    padding: 2vh 0 0 31%;
+    color: antiquewhite;
+}
+.pb-cust-2{
+    padding-left: 5%;
+}
+
+
+/* cust0m margins */
+#mx-cust{
+    margin-left: 5%;
+}
+.mx-cust{
+    margin-left: 5%;
+}
+#mx-cust-1{
+    margin-right: 8%;
+}
+.margin-l{
+    margin-left: 0;
+    height: 60vh;
+    text-align: right;
+}
+.mx-cust-2{
+    margin-left: 8%;
+}
+.m-cust-l3{
+    margin-left: 12%;
+    padding-top: 15vh; 
+    padding-bottom: 15vh;
+}
+.m-cust-l4{
+    padding-left: 25%;
+}
+/* .mb-custom{
+    margin-bottom: 1.9vh;
+} */
+.mx-cust-4{
+    margin-left: 12%;
+}
+.mx-cust-3{
+    margin-left: 15%;
+    /* margin-top: 6vh; */
+}
+.margin-4{
+    margin-left: 15%;
+}
+.mx-cust-5{
+    box-shadow: 0 0 15px 0px white;
+    margin-left: 20%;
+}
+.m-cust-1{
+    margin-left: 40%;
+}
+.margin-7{
+    margin-left: 30%;
+}
+.margin-8{
+    margin-left: 20%;
+}
+.margin-9{
+    margin-left: 34%;
+}
+.padding-1{
+    padding-top: 9.2vh;
+    padding-bottom: 4.2vh; 
+    margin-left: 3%;
+}
+
+
+
+/* custom heigt,width,  */
+.custom-height{
+    height: fit-content;
+}
+
+.h-cust-1{
+    height: 80vh;
+}
+.height-2{
+    height: 80vh;
+}
+.height-3{
+    height: 71vh;
+}
+.height-4{
+    height: 81.5vh;
+}
+.height-5{
+    height: 50vh;
+}
+.height-6{
+    height: 74vh;
+}
+.height-7{
+    height: 11.3vh;
+}
+.height-8{
+    height: 60vh;
+}
+/* -    -   -   -   - */
+.w-cust-5{
+    width: 60%;
+}
+.w-cust-1{
+    width: 70%;
+}
+.w-cust-2{
+    width: 50%;
+}
+.w-cust-3{
+    /* width: 30%; */
+    width: fit-content;
+}
+.width-4{
+    width: 90%;
+}
+
+
+
+/* custom color(text n backgrounds */
+.text-item{
+    font-size: 17.2px;
+}
+#cust-txtclr-1{
+    color: rgb(137, 222, 243);
+}
+#text-color-2{
+    color: rgba(235, 51, 5, 0.795);
+}
+#text-color-4{
+    color: rgba(221, 172, 160, 0.78);
+}
+.cust-css-2{
+    color: #dfcfcfdc;
+}
+/* -    -   -   -   -   -   -   - */
+
+.cont-color{
+    background: rgba(1, 5, 15, 0.356);
+}
+.navbar{
+    background-color: rgba(1, 5, 15, 0.856);
+}
+
+.nav-link:hover{
+    background: rgba(41, 16, 10, 0.395);
+    /* background: rgba(235, 51, 5, 0.795); */
+    border-radius: 5px;
+}
+#bg-cust-1{
+    background: rgb(20, 101, 126);
+}
+.bg-cust-1{
+    background: rgb(20, 101, 126);
+}
+.bg-cust-2{
+    background: linear-gradient(to top, rgba(20, 8, 8, 0.475), transparent);
+}
+/* #222525 */
+.bg-cust-3{
+    background: linear-gradient(to left, rgb(22, 77, 94), transparent),
+    linear-gradient(to right, #353d3d, transparent);  
+}
+.bg-cust-4{
+    background: linear-gradient(to right, rgb(22, 77, 94), transparent),
+    linear-gradient(to left, #353d3d, transparent);
+}
+.bg-cust-5{
+    background: linear-gradient(to left, #353d3d, transparent);
+}
+.bg-cust-6{  
+    background-color: rgb(153, 145, 132);
+}
+.bg-cust-7{
+    background: linear-gradient(to left,  #272e2e, transparent),
+    linear-gradient(to right, rgb(25, 94, 116), transparent); 
+}
+.bg-cust-8{
+    background-color:  #dfcfcfdc;
+}
+.bg-cust-9{
+    background: linear-gradient(to bottom,  #272e2e, transparent),
+                    linear-gradient(to top, rgb(22, 78, 97), transparent);
+}
+
+
+
+/* custom borders */
+.border-color{
+    border: 1px solid red;
+}
+.border-cust-1{
+    border-top: 3px solid #dfcfcfdc;
+    border-right: 2px solid #dfcfcfdc;
+    border-left: 2px solid #dfcfcfdc;
+    /* in use */
+}
+.border-cust-2{
+    border-right: 2px solid #dfcfcfdc;
+    border-left: 2px solid #dfcfcfdc;
+    /* in use */
+}
+.border-cust-3{
+    border-right: 2px solid #dfcfcfdc;
+    border-left: 2px solid #dfcfcfdc;
+    border-bottom: 3px solid #dfcfcfdc;
+    /* in use */ 
+}
+#border-6{
+    border-top: 3px solid #dfcfcfdc;
+    border-bottom: 4px solid #dfcfcfdc;
+    /* in use */
+}
+#border-02{
+    border-right: 3px solid #dfcfcfdc;
+    border-left: 3px solid #dfcfcfdc;
+    /* in use */
+}
+#border-9{
+    border: 2px solid white;
+}
+#border-0{
+    border-top: 5px solid rgb(137, 222, 243);
+    border-left: 5px solid rgb(137, 222, 243);
+}
+
+
+.new h4{
+    text-decoration: overline;
+}
+
+
+
+/* custom animes */
+
+.text-align{
+    text-align: center;
+}
+
+#position-1{
+    position: absolute;
+    z-index: 2;
+}
+
+
+.color-1{
+    background: rgba(rgba(0, 195, 255, 0.884));
+}
+.icon-color{
+    fill: white;
+}
+
+.typewriter{
+    overflow: hidden;
+    border-right: 1px solid  red;
+    white-space: nowrap;
+    animation: typewriter 7s linear,
+                blink-caret .75s step-end infinite;
+}
+@keyframes typewriter{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgba(226, 224, 223, 0.726);}
+  }
+
