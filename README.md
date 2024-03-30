@@ -1,4 +1,4 @@
-The file covers the basics to the cmplexities of tthe python flask framework:
+The file covers the basics to the complexities of tthe python flask framework:
 * it is encompasses 5 major file, tht is the;
     - game file consisting of the :
        - static files(html,bootstrap css and javascript and other bootstrap icons files
