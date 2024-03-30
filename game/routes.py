@@ -1,4 +1,10 @@
 
+""" the routes page consists of all thec onnections
+   to various pages of the website.
+   also contains the other code used during interaction with the 
+   frontend pages.
+ """
+
 from game import app
 from game.forms import Login_form, Register_form,Booking_form
 from flask import redirect, url_for, render_template, flash, session,request

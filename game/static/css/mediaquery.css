@@ -24,6 +24,16 @@
     .mx-cust-2{
         margin-left: auto;
     }
+    .cust-css{
+        border-left: none;
+        margin-left: 1%;
+    }
+    .cust-css-1{
+        border-top: 2px solid rgba(241, 217, 217, 0.774);
+        padding-top: 10vh;
+        margin-top: 24vh;
+        margin-bottom: 5vh;
+    }   
 }
 
 /* portrait tablets n landscape phones */
@@ -67,4 +77,14 @@
         border-left: none;
         margin-left: 1%;
     }   
+    #smalls{
+        background: linear-gradient(to left, rgb(22, 77, 94), transparent),
+        linear-gradient(to right, #353d3d, transparent); ;
+    }
+    #border-02,#border-9{
+        border: none;
+        background: linear-gradient(to right, #353d3d, transparent);
+        box-shadow: none;
+    }
+    
 }

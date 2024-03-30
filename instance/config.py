@@ -1,3 +1,7 @@
+""" contains links to database connections, ie.,mysql
+    mail client, ie.gmail, yahoo,
+    also hold the secret key used wit form validations
+"""
 
 import os
 

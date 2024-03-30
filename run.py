@@ -1,4 +1,5 @@
 
+"""  contains code for running the app """
 
 from game import app
 

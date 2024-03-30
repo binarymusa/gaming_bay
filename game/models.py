@@ -1,4 +1,6 @@
 
+""" models or (database tables) configured here """
+
 from game import db,login_manager
 from game import bcrypt
 from flask_login import UserMixin

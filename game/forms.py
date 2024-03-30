@@ -1,4 +1,6 @@
 
+""" all forms rendered on html pages are contained here """
+
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, SelectField, RadioField, TextAreaField, DateTimeField
 from wtforms.validators import Length, EqualTo, Email, DataRequired, ValidationError,Optional 

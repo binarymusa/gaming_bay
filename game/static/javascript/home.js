@@ -10,13 +10,16 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // clear the text content
     paragraph.textContent = '';
-
+    
     // iterate through each character
     var i = 0;
     var typingInterval = setInterval( function() {
         paragraph.textContent += text.charAt(i); i++;
 
         // stop the interval when all characters are typed
+        // if (paragraph.c=== 100 && i != text.length){
+
+        // }
         if (i === text.length) {
             clearInterval(typingInterval);
         }
