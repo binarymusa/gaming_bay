@@ -12,3 +12,6 @@ The file covers the basics to the complexities of tthe python flask framework:
     - A app execution file(run.py) for sTarting the application
       
     -and a file containing some of the apps dependency file(requirements.txt    
+
+* Your thoughts are highly welcomed
+  
