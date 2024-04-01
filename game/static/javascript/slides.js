@@ -23,4 +23,3 @@ function isElementInViewport(el) {
     );
 }
 
-get
