@@ -123,9 +123,7 @@ def login_page():
       if user_to_check and user_to_check.verify_password(
          password_attempt=form.password.data
       ):
-         login_user(user_to_check)
-         # return redirect(url_for('home_page'))
-     
+         login_user(user_to_check)     
        # Check if the logged-in user has the 'admin' role
          if user_to_check.role and user_to_check.role.name == 'admin':
                flash(f'welcome back sir, {(current_user.username).upper()}', category='success')
@@ -189,7 +187,7 @@ def Bookings_page():
       
       db.session.commit()
      
-      flash(f'Your booking has been submitted successfully', category='success') 
+      flash(f'submitted successfully,. Forwaded to enrolls page', category='success') 
          
    return render_template('Bookings.html', form=form, games=games,consoles=consoles,timeslots=timeslots,dateslots=dateslots)
 

@@ -303,7 +303,7 @@
 
 .typewriter{
     overflow: hidden;
-    border-right: 1px solid  red;
+    border-right: 1px solid;
     white-space: nowrap;
     animation: typewriter 7s linear,
                 blink-caret .75s step-end infinite;
@@ -321,3 +321,6 @@
     50% { border-color: rgba(226, 224, 223, 0.726);}
   }
 
+#vague{
+    opacity: 0.3;
+}
