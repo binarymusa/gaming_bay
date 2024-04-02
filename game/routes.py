@@ -81,9 +81,11 @@ def profile_page():
 @app.route('/my submissions')
 @login_required
 def submissions_page():
-   booked_user = Booking.query.all()
+   curent_bookings = Booking.query.all()
+   # Filter bookings for the current user
+   # user_bookings = Booking.query.filter_by(user_id=current_user.id).all()
    flash(f'Your bookings as of, {datetime.now().strftime("%d-%m-%Y")}', category="success")
-   return render_template('submissions.html',booked_user=booked_user)
+   return render_template('submissions.html', curent_bookings=curent_bookings)
 
 
 # route to user Registration page
@@ -145,8 +147,7 @@ def login_page():
 def Bookings_page():
    form = Booking_form()
    games, consoles, timeslots, dateslots = Game.query.all(), Console.query.all(), TimeSlot.query.all(), DateSlot.query.all()
-   
-   # Filter bookings for the current user
+
    user_bookings = Booking.query.filter_by(user_id=current_user.id).all()
 
    if request.method == 'POST' and form.validate_on_submit():
@@ -155,9 +156,7 @@ def Bookings_page():
       selected_console = request.form.get('console')
       selected_timeslot = request.form.get('timeslot')
       selected_dateslot = request.form.get('dateslot')
-
      
-      
       if len(selected_games) > 3:
           flash('You can select up to 3 games only.', category='danger')
           return render_template('Bookings.html', form=form, games=games, consoles=consoles, timeslots=timeslots, dateslots=dateslots)
@@ -170,8 +169,6 @@ def Bookings_page():
               console_id=selected_console,
               time_id=selected_timeslot,
               date_id=selected_dateslot,
-            #   time_id=selected_timeslot_str,
-            #   date_id=date_slot_str,
               user_id=current_user.id  # Assuming you have a current_user object available
           )
           db.session.add(booking)
@@ -179,8 +176,8 @@ def Bookings_page():
       db.session.commit()
      
       flash(f'submitted successfully,. Forwaded to enrolls page', category='success') 
-         
-   return render_template('Bookings.html', form=form, games=games,consoles=consoles,timeslots=timeslots,dateslots=dateslots, user_bookings=user_bookings)
+   
+   return render_template('Bookings.html', form=form, games=games,consoles=consoles,timeslots=timeslots,dateslots=dateslots,user_bookings=user_bookings)
 
 
 @app.route('/logout')

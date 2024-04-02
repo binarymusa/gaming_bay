@@ -324,3 +324,7 @@
 #vague{
     opacity: 0.3;
 }
+#foot{
+    margin-left: 5%;
+    border-top: 2px solid #dfcfcfdc;
+}
