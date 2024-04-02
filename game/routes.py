@@ -146,6 +146,9 @@ def Bookings_page():
    form = Booking_form()
    games, consoles, timeslots, dateslots = Game.query.all(), Console.query.all(), TimeSlot.query.all(), DateSlot.query.all()
    
+   # Filter bookings for the current user
+   user_bookings = Booking.query.filter_by(user_id=current_user.id).all()
+
    if request.method == 'POST' and form.validate_on_submit():
       
       selected_games = request.form.getlist('games')
@@ -153,19 +156,7 @@ def Bookings_page():
       selected_timeslot = request.form.get('timeslot')
       selected_dateslot = request.form.get('dateslot')
 
-      # Retrieve selected game names
-      #selected_games = [Game.query.get(game_id).name for game_id in selected_games]
-      
-      # Retrieve console name
-      #selected_console = Console.query.get(selected_console).console_name
-      
-      # Retrieve time slot
-      #selected_timeslot = TimeSlot.query.get(selected_timeslot)
-      #selected_timeslot_str = f"{selected_timeslot.start_time} - {selected_timeslot.end_time}"
-
-      # Retrieve date slot
-      #selected_dateslot = DateSlot.query.get(selected_dateslot)
-      #date_slot_str = selected_dateslot.date_slot.strftime('%Y-%m-%d')
+     
       
       if len(selected_games) > 3:
           flash('You can select up to 3 games only.', category='danger')
@@ -189,7 +180,7 @@ def Bookings_page():
      
       flash(f'submitted successfully,. Forwaded to enrolls page', category='success') 
          
-   return render_template('Bookings.html', form=form, games=games,consoles=consoles,timeslots=timeslots,dateslots=dateslots)
+   return render_template('Bookings.html', form=form, games=games,consoles=consoles,timeslots=timeslots,dateslots=dateslots, user_bookings=user_bookings)
 
 
 @app.route('/logout')

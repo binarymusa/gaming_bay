@@ -65,10 +65,8 @@ class Roles(db.Model):
 
 class Booking(db.Model):
     id = db.Column(db.Integer, primary_key=True)   
-    # game_name = db.Column(db.String(100), nullable=False)
-    # foreign keys to tables game,console,timeslot and dateslot
-    game_id = db.Column(db.Integer, db.ForeignKey('game.id'), nullable=False)
-    # console_id = db.Column(db.String(100), db.ForeignKey('console.console_name'), nullable=False)
+    
+    game_id = db.Column(db.Integer, db.ForeignKey('game.id'), nullable=False, index=True)
     console_id = db.Column(db.Integer, db.ForeignKey('console.id'), nullable=False) 
     date_id = db.Column(db.Integer, db.ForeignKey('date_slot.id'), nullable=False) 
     time_id = db.Column(db.Integer, db.ForeignKey('time_slot.id'), nullable=False) 
@@ -97,7 +95,7 @@ class TimeSlot(db.Model):
 
 class DateSlot(db.Model):
     id = db.Column(db.Integer, primary_key=True, )
-    date_slot = db.Column(db.Date, nullable=False)
+    date_slot = db.Column(db.Date, nullable=False, unique=False)
     
 
 
