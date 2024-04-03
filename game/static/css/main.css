@@ -291,7 +291,9 @@
 #position-1{
     position: absolute;
     z-index: 2;
+    opacity: 0.5;
 }
+   
 
 
 .color-1{

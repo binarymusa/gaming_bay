@@ -141,14 +141,7 @@
                                     Register
                                 </a>
                             </li>
-                            <!-- <a class="nav-link dropdown-toggle" id="text-color" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Others
-                            </a>
-                            <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item bg-success text-light" href="{{ url_for('login_page')}}">Login</a></li>
-                            <li><a class="dropdown-item bg-dark text-light" href="{{ url_for('Register_page')}}">Register</a></li>
-                            </ul>
-                        </li> -->
+                            
                     </ul>
                 {% endif %}
 
@@ -207,6 +200,7 @@
           
         </main>
         
+        <script src="{{ url_for('static', filename='javascript/message.js') }}"></script>
         <script src="{{ url_for('static', filename='javascript/home.js') }}"></script>
         <script src="{{ url_for('static', filename='javascript/bookings.js') }}"></script>
         <script src="{{ url_for('static', filename='javascript/slides.js') }}"></script>

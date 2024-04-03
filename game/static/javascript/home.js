@@ -44,10 +44,3 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 
-// var timed = document.querySelector('#positon-1');
-
-// function timer() {
-//     timed.setTimeout(() => {
-//         timed.style.display = "none";
-//     }, 10);
-// }

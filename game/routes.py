@@ -7,19 +7,18 @@
 
 from game import app
 from game.forms import Login_form, Register_form,Booking_form
-from flask import redirect, url_for, render_template, flash, session,request
+from flask import redirect, url_for, render_template, flash, session,request,jsonify,Blueprint
 from game.models import User,Booking, Game,Console,TimeSlot,DateSlot
 from game import db
 from flask_login import login_user, logout_user, login_required, current_user
 from datetime import datetime  #  {datetime.now().strftime("%Y-%m-%d %H:%M")}!
 
-#import unittest
-# import json
-# from functools import wraps
-# from sqlalchemy.orm import sessionmaker, scoped_session
+# auth_bp = Blueprint('auth', __name__)
+
 
 
 # route to welcome page # @app.route('/') -means the landing page
+
 @app.route('/')
 @app.route('/welcome page')
 def welcome_page():
@@ -89,7 +88,7 @@ def submissions_page():
 
 
 # route to user Registration page
-@app.route('/Register', methods=['GET', 'POST'])
+@app.route('/Register', methods=['POST', 'GET'])
 def Register_page():
    form = Register_form()
 
@@ -115,7 +114,7 @@ def Register_page():
    
 
 # route to user login's page
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login', methods=['POST', 'GET'])
 def login_page():
    form = Login_form()
 

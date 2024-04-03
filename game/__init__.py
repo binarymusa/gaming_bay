@@ -1,5 +1,5 @@
 
-from flask import Flask
+from flask import Flask,Blueprint
 from flask_sqlalchemy import SQLAlchemy
 from instance.config import Config
 from flask_bcrypt import Bcrypt
@@ -7,9 +7,11 @@ from flask_login import LoginManager
 from flask_migrate import Migrate
 
 # from flask_mail import Mail
-
+# from flask_restful import Api,Resource
 
 app = Flask(__name__)
+# main = Blueprint('main', __name__)
+# app = Api(app)
 
 app.config.from_object(Config)
 db = SQLAlchemy(app)
@@ -21,6 +23,11 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login_page'
 login_manager.login_message_category = 'info'
+
+# from game.routes import auth_bp  # Import the blueprint
+
+# Register the blueprint
+# app.register_blueprint(auth_bp, url_prefix='/auth')
 
 app.app_context().push()
 
