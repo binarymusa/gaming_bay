@@ -1,0 +1,10 @@
+
+# use theese codes to run the flask web application. Any of them can work
+# be keen on the detail
+# open a terminal,search cmd on windows or terminal on linux and
+# run one of the codes below
+# use python3 for the first if python fails to run
+
+1. python run.py or python3 run.py 
+
+2. gunicorn -w 4 -b 0.0.0.0:8000 run:app
