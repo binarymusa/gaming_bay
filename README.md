@@ -15,30 +15,7 @@ The file covers the basics to the complexities of tthe python flask framework:
 
 * Your thoughts are highly welcomed
   
-Diagramatic representation of the file structure.
 
-your_project_name/
-		│
-		├── app/
-		│   ├── __init__.py
-		│   ├── routes.py
-		│   ├── models.py
-		│   ├── forms.py
-		│   ├── templates/
-		│   │   ├── base.html
-		│   │   ├── index.html
-		│   │   └── other_templates.html
-		│   └── static/
-		│       ├── css/
-		│       │   └── styles.css
-		│       └── js/
-		│           └── script.js
-		│
-		├── instance/
-		│   └── config.py
-		│
-		├── tests/
-		│   ├── __init__.py
 		│   └── test_routes.py
 		│
 		├── venv/ (or any virtual environment folder)
