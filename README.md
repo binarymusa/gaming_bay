@@ -16,10 +16,3 @@ The file covers the basics to the complexities of tthe python flask framework:
 * Your thoughts are highly welcomed
   
 
-		│   └── test_routes.py
-		│
-		├── venv/ (or any virtual environment folder)
-		│
-		├── config.py
-		├── requirements.txt
-		└── run.py
