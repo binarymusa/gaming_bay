@@ -9,8 +9,9 @@ from game import app
 from game.forms import Login_form, Register_form,Booking_form
 from flask import redirect, url_for, render_template, flash, session,request,jsonify,Blueprint
 from game.models import User,Booking, Game,Console,TimeSlot,DateSlot
-from game import db
+from game import db,api
 from flask_login import login_user, logout_user, login_required, current_user
+from flask_restful import reqparse,Resource
 from datetime import datetime  #  {datetime.now().strftime("%Y-%m-%d %H:%M")}!
 
 # auth_bp = Blueprint('auth', __name__)
@@ -87,7 +88,7 @@ def submissions_page():
    return render_template('submissions.html', curent_bookings=curent_bookings)
 
 
-# route to user Registration page
+# route to user Registration page 
 @app.route('/Register', methods=['POST', 'GET'])
 def Register_page():
    form = Register_form()
