@@ -66,18 +66,13 @@ class Roles(db.Model):
 class Booking(db.Model):
     id = db.Column(db.Integer, primary_key=True)   
     
-    game_id = db.Column(db.Integer, db.ForeignKey('game.id'), nullable=False, index=True)
-    console_id = db.Column(db.Integer, db.ForeignKey('console.id'), nullable=False) 
-    date_id = db.Column(db.Integer, db.ForeignKey('date_slot.id'), nullable=False) 
-    time_id = db.Column(db.Integer, db.ForeignKey('time_slot.id'), nullable=False) 
+    games = db.Column(db.String(255), nullable=False)
+    console = db.Column(db.String(100), nullable=False)
+    timeslot = db.Column(db.String(100), nullable=False)
+    dateslot = db.Column(db.String(100), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False) 
 
-    game = db.relationship('Game', backref='bookings')
-    console = db.relationship('Console', backref='bookings')
-    timeslot = db.relationship('TimeSlot', backref='bookings')
-    dateslot = db.relationship('DateSlot', backref='bookings')
-
-
+   
 class Game(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(100), nullable=False, unique=True)

@@ -26,10 +26,11 @@
 document.addEventListener('DOMContentLoaded', function(){
 
     var alert = document.querySelector('.alert');
-
+    
     setTimeout(function() {
         alert.parentNode.removeChild(alert);
     }, 4000);
+
 
     function newOpacity() {
         alert.style.opacity = '1';
@@ -40,4 +41,5 @@ document.addEventListener('DOMContentLoaded', function(){
 
    alert.addEventListener('mouseenter', newOpacity);
    alert.addEventListener('mouseleave', oldOpacity);
+   
 })

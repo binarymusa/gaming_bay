@@ -4,7 +4,7 @@
 
 /* custom mixed css items */
 .cust-css{
-    border-left: solid rgba(241, 217, 217, 0.774) 2px;
+    /* border-left: solid rgba(241, 217, 217, 0.774) 2px; */
     margin-left: 5%;
 }
 .cust-css-1{
@@ -16,7 +16,7 @@
     height: 75vh;
 }
 .cust-css-4{
-    text-decoration: 2px #bdb9b9 overline;
+    text-decoration: 2px #777676 overline;
     padding-top: 0.5px;
 }
 .cust-css-5{
@@ -220,14 +220,14 @@
     background: linear-gradient(to left, #353d3d, transparent);
 }
 .bg-cust-6{  
-    background-color: rgb(153, 145, 132);
+    background-color: #dfcfcf;
 }
 .bg-cust-7{
     background: linear-gradient(to left,  #272e2e, transparent),
     linear-gradient(to right, rgb(25, 94, 116), transparent); 
 }
 .bg-cust-8{
-    background-color:  #dfcfcfdc;
+    background-color:  #dfcfcfb7;
 }
 .bg-cust-9{
     background: linear-gradient(to bottom,  #272e2e, transparent),
