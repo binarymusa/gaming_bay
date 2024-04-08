@@ -6,7 +6,7 @@
 
 {% block content %}
     <div class="container-fluid bg-dark pb-1 font-monospace">
-        <div class="nav-bar bg-cust-4 cust-css-2 w-cust-2  px-2">
+        <div class="nav-bar bg-cust-4 cust-css-2 w-cust-2 mb-3 px-2">
             <h3>My submissions</h3>
         </div>
     
@@ -18,30 +18,37 @@
                     <p><strong>Console:</strong> {{ booked_item.console }}</p>
                     <p><strong>Timeslot:</strong> {{ booked_item.timeslot }}</p>
                     <p><strong>Dateslot:</strong> {{ booked_item.dateslot }}</p>
-                    <button type="button" class="btn btn-danger mb-2" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                        Delete Booking
-                    </button>
-                </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title" id="deleteModalLabel">Delete Booking</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                            Are you sure you want to delete this booking?
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
+                    <form action="{{ url_for('delete_booking') }}" method="post">
+                        <input type="hidden" name="booking_id" value="{{ booked_item.id }}">
+
+                        <button type="button" class="btn btn-danger mb-2" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                            Delete Booking
+                        </button>
+
+                        <!-- Deletion Modal -->
+
+                        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="deleteModalLabel">Delete Booking</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure you want to delete this booking?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                
+                    </form>
+                </div>                
             </div> 
         {% endfor %} 
                 

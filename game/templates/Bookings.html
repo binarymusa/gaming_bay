@@ -52,7 +52,7 @@
                       <h5 class="card-title cust-css-4">Select Time Slot</h5>
                       {% for timeslot in timeslots %}
                           <div class="form-check">
-                              <input class="form-check-input bg-dark" type="radio" name="timeslot" value="{{ timeslot.start_time }}">
+                              <input class="form-check-input bg-dark" type="radio" name="timeslot" value="{{ timeslot.start_time }}-{{ timeslot.end_time }}">
                               <label class="form-check-label pt-2">Start time: {{ timeslot.start_time }} - End time: {{ timeslot.end_time }}</label>
                           </div>
                       {% endfor %}

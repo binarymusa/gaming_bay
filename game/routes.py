@@ -81,12 +81,33 @@ def profile_page():
 @app.route('/my submissions')
 @login_required
 def submissions_page():
-   
    # Filter bookings for the current user
    booked_user = Booking.query.filter_by(user_id=current_user.id).all()
+    
+   if not booked_user:
+      flash('No bookings', category='success')
    
-   flash(f'Your bookings as of, {datetime.now().strftime("%d-%m-%Y")}', category="success")
+
+   # flash('No bookings yet') if (booked_user == '') else flash(f'Current bookings' , category="success")
+   # {datetime.now().strftime("%d-%m-%Y")} - to show current date
    return render_template('submissions.html', booked_user=booked_user)
+
+# booking deletion route
+@app.route('/delete_booking', methods=['POST'])
+@login_required
+def delete_booking():
+   if request.method == 'POST':
+      booking_id = request.form['booking_id']
+      booking = Booking.query.get(booking_id)
+
+      if booking:
+         db.session.delete(booking)
+         db.session.commit()
+         # flash('Booking deleted successfully', category='success')
+      else:
+         flash('Booking not found', category='error')
+
+   return redirect(url_for('submissions_page'))
 
 
 # route to user Registration page 
@@ -149,8 +170,6 @@ def Bookings_page():
    form = Booking_form()
    games, consoles, timeslots, dateslots = Game.query.all(), Console.query.all(), TimeSlot.query.all(), DateSlot.query.all()
 
-   # user_bookings = Booking.query.filter_by(user_id=current_user.id).all()
-
    if request.method == 'POST' and form.validate_on_submit():
       
       selected_games = request.form.getlist('games')
@@ -159,11 +178,12 @@ def Bookings_page():
       selected_dateslot = request.form.get('dateslot')
      
       games_string = ','.join(selected_games)
+      timeslot_string = selected_timeslot.replace('-', '-')
 
       booking = Booking(
          games=games_string,
          console=selected_console,
-         timeslot=selected_timeslot,
+         timeslot=timeslot_string,
          dateslot=selected_dateslot,
          user_id=current_user.id  # Assuming you have a current_user object available
       )
@@ -171,7 +191,8 @@ def Bookings_page():
       
       db.session.commit()
      
-      flash(f'submitted successfully,. Forwaded to enrolls page', category='success') 
+      flash(f'submitted successfully', category='success') 
+      return redirect(url_for('submissions_page'))
    
    return render_template('Bookings.html', form=form, games=games,consoles=consoles,timeslots=timeslots,dateslots=dateslots,)
 
