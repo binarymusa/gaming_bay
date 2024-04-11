@@ -25,11 +25,6 @@
     font-size: larger;
 }
 #cust-css-6{
-    /* width: 30%; */
-    /* box-shadow: 0 0 5px 0 white; */
-    /* background-image: url(/static/img2/codmw3.jpg); */
-   /*  background: linear-gradient(to bottom, rgba(15, 14, 14, 0.26), transparent),
-    linear-gradient(to top, rgba(22, 77, 94, 0.356), transparent); */
     background-repeat: no-repeat;background-size: cover;
     animation: shake 10s linear 3 2s;
 }
@@ -41,6 +36,9 @@
     border: 2px solid;
     height: fit-content;
     width: fit-content;
+}
+.cust-css-9{
+    padding-top: 15vh;
 }
 
 /* custom paddings id's n classes */

@@ -18,3 +18,4 @@ function hideMenu(){
     navBar.style.display = "none" 
 }
 
+

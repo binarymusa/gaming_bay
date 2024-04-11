@@ -23,18 +23,19 @@
 
     <body>
         
-        <nav class="navbar navbar-expand-md navbar-dark font-monospace pt-3 pb-3">
+        <nav class="position-fixed fixed-top navbar navbar-expand-md navbar-dark font-monospace pt-3 pb-3">
             <div class="container-fluid">
                 <button class="navbar-toggler mx-2 bg-cust-3"  type="button" data-bs-toggle="collapse"  data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon "></span>
                 </button>
                 
-                <a class="navbar-brand text-success" href="#">GIZMO.org</a>
+
+                <a class="navbar-brand text-success" href="{{ url_for('home_page')}}">GIZMO.org</a>
                 
-                <div class="collapse navbar-collapse m-1 rounded-1 bg-cust-4" id="navbarNav">
+                <div class="collapse navbar-collapse m-1 rounded-1 bg-cust-4 " id="navbarNav">
 
-                    <a class="navbar-brand text-success d-lg-none d-sm-none" href="#">GIZMO.org</a>
-
+                    <a class="navbar-brand text-success d-lg-none d-sm-none" href="{{ url_for('home_page')}}">GIZMO.org</a>
+                    
                     {% if current_user.is_authenticated %}
                     
                         <ul class="navbar-nav m-2 px-lg-4 cust-css-2 border rounded-1 ">
@@ -73,7 +74,7 @@
                                     </svg>    
                                 </button>
                                 
-                                <ul class="dropdown-menu bg-dark cust-css-2 p-2">
+                                <ul class="dropdown-menu bg-dark cust-css-2 p-2" id="smallnav">
                                     <li class="" >
                                         <a class="disabled nav-link text-success" >
                                             -   {{ current_user.username.upper() }} -
@@ -163,10 +164,10 @@
         {% endwith %}
 
        
-        <main>
+        <main class="cust-css-9">
 
             {% block content %}
-
+            
             
             {% endblock %}
 

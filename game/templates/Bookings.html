@@ -40,7 +40,7 @@
                       <h5 class="card-title cust-css-4">Select Console</h5>
                       {% for console in consoles %}
                           <div class="form-check">
-                              <input class="form-check-input bg-dark" type="radio" name="console" value="{{ console.console_name }}">
+                              <input class="form-check-input bg-dark" type="radio" name="console" value="{{ console.console_name }}" id="clicked">
                               <label class="form-check-label pt-2">{{ console.console_name }} : {{console.description}} </label>
                           </div>
                       {% endfor %}
