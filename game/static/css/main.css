@@ -94,7 +94,7 @@
     margin-left: 15%;
 }
 .mx-cust-5{
-    box-shadow: 0 0 15px 0px white;
+    /* box-shadow: 0 0 15px 0px white; */
     margin-left: 20%;
 }
 .m-cust-1{
@@ -265,8 +265,9 @@
     border-left: 3px solid #dfcfcfdc;
     /* in use */
 }
-#border-9{
-    border: 2px solid white;
+#border-9 a:hover{
+    /* border: 2px solid white; */
+    color: black;
 }
 #border-0{
     border-top: 5px solid rgb(137, 222, 243);
@@ -287,9 +288,10 @@
 }
 
 #position-1{
+    margin-top: 20vh;
     position: absolute;
     z-index: 2;
-    opacity: 0.5;
+    opacity: 1;
 }
    
 

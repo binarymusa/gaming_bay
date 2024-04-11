@@ -152,7 +152,7 @@
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
                 {% for category, message in messages %}
-                    <div class="alert alert-{{category}} mt-1 w-cust-3 m-cust-1 pb-cust-2" id="position-1">
+                    <div class="alert alert-{{category}}  w-cust-3 m-cust-1 pb-cust-2" id="position-1">
                         <button type="button" class="m1-2 mb-1 close" data-bs-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -164,7 +164,7 @@
         {% endwith %}
 
        
-        <main class="cust-css-9">
+        <main class="cust-css-9" style="height: 100vh;">
 
             {% block content %}
             
@@ -174,11 +174,11 @@
             <footer class="bg-dark cust-css-2 font font-monospace pt-lg-4 pt-md-3 pb-2 cust-css-5 " >
                 <div class="container rounded">
                     <div class="row">
-                        <div class="col-lg-5 rounded-1" >
+                        <div class="col-lg-5 rounded-1 " style="text-align: left;" >
                             <p>&copy; 2024 Primal Titan</p>
                         </div>
 
-                        <div class="col-lg-5 text-end rounded-1 ms-auto" >
+                        <div class="col-lg-5 text-end rounded-1  ms-auto" >
                             <div class="container row">
                                 <div class="col">
                                     <a href="https://github.com/binarymusa">

@@ -5,9 +5,9 @@
 
 {% block content %}
 
-  <div class="container-fluid bg-dark text-light pt-5 pb-5">
+  <div class="container-fluid bg-dark text-light " style=" padding: 15vh 0 15vh 0">
 
-    <form method="POST" class="form-signin bg-cust-3 text-align w-cust-1 mx-cust-3" id="border-6">
+    <form method="POST" class="form-signin bg-cust-3 text-align w-cust-1 mx-cust-3 rounded-2 " style="color: #dfcfcfdc;" >
       {{ form.hidden_tag() }}
       <h1 class="h3 mb-3 font-weight-normal">
         Please Login
@@ -22,7 +22,7 @@
       
       <div class="checkbox mb-3">
         <h6>Do not have an account?</h6>
-        <a class="btn btn-secondary m-3" href="{{ url_for('Register_page')}}">Register</a>
+        <a class="btn btn-secondary m-3 " href="{{ url_for('Register_page')}}">Register</a>
      </div>
 
      <div class="pb-2">{{ form.submit(class="btn btn-lg btn-block btn-primary")}}</div>
