@@ -38,7 +38,7 @@
                     
                     {% if current_user.is_authenticated %}
                     
-                        <ul class="navbar-nav m-2 px-lg-4 cust-css-2 border rounded-1 ">
+                        <ul class="navbar-nav m-2 px-lg-4 cust-css-2">
                             
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('home_page')}}">
@@ -102,7 +102,7 @@
                     
                     
                     {% else %}
-                        <ul class="navbar-nav m-2 px-lg-4 cust-css-2 border rounded-1 ">
+                        <ul class="navbar-nav m-2 px-lg-4 cust-css-2 ">
                             <!-- <li class="nav-item" id="icon"><i class="fa fa-times" onclick="hideMenu()"></i></li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('home_page')}}">                            
@@ -127,7 +127,7 @@
                             </li>
                         </ul>
     
-                        <ul class="navbar-nav ms-auto mt-2 mb-1 px-lg-3 bg-cust-4 border rounded-2 cust-css-2">
+                        <ul class="navbar-nav ms-auto mt-2 mb-1 px-lg-3 bg-cust-4 cust-css-2">
                             <li>
                                 <a class="nav-link"  href="{{ url_for('login_page')}}">
                                     Login
