@@ -12,7 +12,7 @@
         <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     </head>
 
-    <nav class="navbar navbar-expand-md  bg-dark font-monospace" style="border-bottom: 1px solid #dfcfcfdc;">
+    <nav class="navbar navbar-expand-md  bg-dark font-monospace">
 
         <button class="navbar-toggler mx-2 bg-cust-3"  type="button" data-bs-toggle="collapse"  data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon "></span>
@@ -79,37 +79,9 @@
         {% endif %}
     {% endwith %}
 
-    <body>
-       
-        <section class="container-fluid bg-cust-9">
-    
-            <div class="pb-cust-1">
-                <h3
-                class="font-monospace py-2 px-2 rounded border-success cust-css-8">
-                    Clcik to work with the menus
-                </h3>
-            </div>
-
-            <div class="row" style="padding: 3vh 0 15vh 0"> 
-                <div class="col-lg-4 pb-sm-2 down">
-                    <a class="nav-link rounded-1 height-8 bg-dark" id="cust-css-6" href="{{ url_for('Admin_page') }}" >
-                        <h3 class="font-monospace cust-css-7">Home</h3>
-                    </a>
-                </div>
-                
-                <div class="col-lg-4 pb-sm-2 down">
-                    <a class="nav-link  rounded-1 height-8 bg-dark" id="cust-css-6" href="#">
-                        <h3 class="font-monospace cust-css-7">Users</h3>
-                    </a>
-                </div>
-               
-                <div class="col-lg-4 pb-sm-2 pb-md-1 down">
-                    <a class="nav-link rounded-1 height-8 bg-dark" id="cust-css-6" href="#">
-                        <h3 class="font-monospace cust-css-7">Settings</h3>
-                    </a>
-                </div>
-                
-            </div>
+    <body class="bg-dark">       
+        <section class="container-fluid">
+            {% include 'includes/adminView.html' %}          
         </section>
         
         <script src="{{ url_for('static', filename='javascript/message.js') }}"></script>

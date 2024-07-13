@@ -6,7 +6,7 @@
 
 {%block content%}
 
-  <div class="container-fluid bg-dark text-light p-2 pb-5">
+  <div class="container-fluid bg-dark text-light p-2 pb-5 font-monospace">
 
       <form method="POST" class="form-signin text-align width-4 mt-2  w-cust-2  mx-cust" >
           {{ form.hidden_tag() }}
@@ -24,7 +24,7 @@
                               <label class="form-check-label pt-3">{{ game.name }} : {{game.description}} </label>
                           </div>                          
                       {% endfor %}
-                      <div class="bg-danger-subtle mt-lg-3 margin-l2" style="width: inherit;">
+                      <div class="bg-dark-subtle mt-lg-3 margin-l2" style="width: inherit;">
                         <h4>Note:</h4>
                         <ol class="bg-cust-3 text-white">
                           <li>Select only 3 games</li> 

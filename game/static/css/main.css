@@ -37,9 +37,6 @@
     height: fit-content;
     width: fit-content;
 }
-.cust-css-9{
-    padding-top: 14.6vh;
-}
 
 /* custom paddings id's n classes */
 .pb-cust{
@@ -74,7 +71,7 @@
 }
 .m-cust-l3{
     margin-left: 12%;
-    padding-top: 15vh; 
+    padding-top: 16vh; 
     padding-bottom: 15vh;
 }
 .m-cust-l4{
@@ -95,10 +92,12 @@
 }
 .mx-cust-5{
     /* box-shadow: 0 0 15px 0px white; */
-    margin-left: 20%;
+    /* margin-left: 20%; */
+    margin: auto;
 }
 .m-cust-1{
     margin-left: 40%;
+   
 }
 .margin-7{
     margin-left: 30%;
@@ -112,7 +111,7 @@
 .padding-1{
     padding-top: 9.2vh;
     padding-bottom: 4.2vh; 
-    margin-left: 3%;
+    margin: auto;
 }
 
 
@@ -218,7 +217,7 @@
     background: linear-gradient(to left, #353d3d, transparent);
 }
 .bg-cust-6{  
-    background-color: #dfcfcf;
+    background-color: #aaa4a4;
 }
 .bg-cust-7{
     background: linear-gradient(to left,  #272e2e, transparent),
@@ -288,7 +287,7 @@
 }
 
 #position-1{
-    margin-top: 20vh;
+    /* margin-top: 20vh; */
     position: absolute;
     z-index: 2;
     opacity: 1;

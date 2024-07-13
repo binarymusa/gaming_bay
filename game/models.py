@@ -24,11 +24,10 @@ class User(db.Model, UserMixin):
     phone_no = db.Column(db.String(length=10) )
     password_hash = db.Column(db.String(length=128), nullable=False)
 
-
     booking = db.relationship('Booking', backref='owned_user', lazy=True) # bi-directional connection
     role = db.relationship('Roles', backref='users') # secondary='roles_id',
    
-    # - -   -   -   -   -   -   -   - password security(werkzeug)
+    # -     -       -       -       password security(werkzeug)
     @property
     def password(self):
         return self.password

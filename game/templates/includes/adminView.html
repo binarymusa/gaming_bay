@@ -1,0 +1,85 @@
+
+
+<div class="container-fluid m-auto row font-monospace mt-4" >
+
+    <div class="col-4 text-center" style=" border-right: 3px solid #d1d1d3b6">
+        <h3 class="text-white" style="text-decoration: 1.5px #d1d1d3b6 overline;">Games Available</h3>
+        <table class="container table text-center" style="width: fit-content; ">
+            <thead>
+                <tr >
+                    <th>GameName</th>                                               
+                </tr>
+            </thead>
+
+            <tbody >
+                {% for game in tabledGames %}
+                <tr>
+                    <td>{{game.name}}</td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>   
+
+        </table> 
+    </div>
+
+    <div class="col text-center">
+        <h3 class="text-white" style="text-decoration: 1.5px #d1d1d3b6 overline;">Users</h3>
+        <table class="container table table-bordered table-striped">
+            <thead>
+                <tr >
+                    <th>userId</th>
+                    <th>username</th>
+                    <th>email_address</th>
+                    <th>phone_no</th>
+                </tr>
+            </thead>
+
+            <tbody >
+                {% for user in tabledUsers %}
+                <tr>
+                    <td>{{user.id}}</td>
+                    <td>{{user.username}}</td>
+                    <td>{{user.email_address}}</td>
+                    <td>{{user.phone_no}}</td>
+                    <td>               
+                        <button type="button" class="btn btn-danger mb-2" data-bs-toggle="modal" data-bs-target="">
+                            Delete
+                        </button> 
+                                                            
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>   
+
+        </table> 
+
+        <h3 class="text-white">User Bookings</h3>
+        <table class="container table table-bordered table-striped">
+            <thead>
+                <tr >               
+                    <th>username</th>
+                    <th>Games</th>
+                    <th>Console</th>
+                    <th>Timeslot</th>
+                    <th>Dateslot</th>                        
+                </tr>
+            </thead>
+
+            <tbody >
+                {% for booking in userBooking %}
+                <tr>
+                    <td>{{booking.user_id}}</td>
+                    <td>{{booking.games}}</td>
+                    <td>{{booking.console}}</td>
+                    <td>{{booking.timeslot}}</td>
+                    <td>{{booking.dateslot}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>   
+
+        </table> 
+    </div>
+
+</div>
+        

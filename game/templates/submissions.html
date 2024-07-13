@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid bg-dark pb-1 font-monospace">
-        <div class="nav-bar bg-cust-4 cust-css-2 w-cust-2 mb-3 px-2">
+    <div class="container-fluid bg-dark pb-1 font-monospace p-3">
+        <div class="nav-bar bg-cust-4 cust-css-2 w-cust-2 mb-3  text-center mx-auto rounded-1">
             <h3>My submissions</h3>
         </div>
     
@@ -24,22 +24,22 @@
                         <input type="hidden" name="booking_id" value="{{ booked_item.id }}">
 
                         <button type="button" class="btn btn-danger mb-2" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                            Delete Booking
+                            Delete
                         </button>
 
                         <!-- Deletion Modal -->
 
-                        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+                        <div class="modal fade bg-cust-3" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
-                                    <div class="modal-header">
+                                    <div class="modal-header  bg-danger-subtle">
                                         <h5 class="modal-title" id="deleteModalLabel">Delete Booking</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                     </div>
-                                    <div class="modal-body">
-                                        Are you sure you want to delete this booking?
+                                    <div class="modal-body ">
+                                        Delete this booking?
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>

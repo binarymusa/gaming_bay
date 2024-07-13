@@ -17,15 +17,7 @@
         margin-top: 1vh;
         margin-bottom: 5vh;
     }
-    .cust-css-9{
-        padding-top: 30vh;
-    }
-}
 
-@media (min-width: 429px ) and (max-width: 760) {
-    .cust-css-9{
-        padding-top: 30vh;
-    }
 }
 
 
@@ -44,23 +36,11 @@
         margin-top: 24vh;
         margin-bottom: 5vh;
     }   
-    .cust-css-9{
+   /*  .cust-css-9{
         padding-top: 12.2vh;
-    }
+    } */
 }
 
-@media (min-width: 761px) and (max-width: 926px) {
-    .cust-css-9{
-        padding-top: 23.8vh;
-       
-    }
-}
-@media (min-width: 811px) and (max-width: 854px) {
-    .cust-css-9{
-        padding-top: 26.2vh;
-       
-    }
-}
 
 /* portrait tablets n landscape phones */
 @media (max-width: 810px) { 
@@ -80,25 +60,10 @@
     
 }
 
-@media (min-width: 761px) and (max-width: 810px) {
-    .cust-css-9{
-        padding-top: 27.5vh;
-       
-    }
-    
-}
-
-@media (min-width: 481px) and (max-width: 760px) {
-    .cust-css-9{
-        padding-top: 21vh;
-    }
-}
 
 /* Landscape phones and down */
 @media (max-width: 480px) { 
-    .cust-css-9{
-        padding-top: 8.2vh;
-    }
+   
     #position-1{
         margin-top: 10vh;
     }
@@ -163,14 +128,4 @@
       }
 }
 
-@media (min-width: 376px) and (max-width: 395px){
-    .cust-css-9{
-        padding-top: 8.5vh;
-    }
-}
 
-@media (max-width: 375px) {
-    .cust-css-9{
-        padding-top: 10vh;
-    }
-}

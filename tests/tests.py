@@ -56,7 +56,6 @@ class TestRoutes(unittest.TestCase):
         db.session.add()
         db.session.commit() """
 
-
         queried_user = User.query.filter_by(username='duke').first()
 
         # adding, updating, Deleting items, query
