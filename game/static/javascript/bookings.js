@@ -1,7 +1,6 @@
 
 
 document.addEventListener('change', function limitGamesSelection() {
-
     // get checkbox items
     var checkboxes = document.querySelectorAll('#textboxalter:checked');
     
@@ -10,8 +9,7 @@ document.addEventListener('change', function limitGamesSelection() {
         var uncheckedCheckboxes = document.querySelectorAll('#textboxalter:not(:checked)');
         
         uncheckedCheckboxes.forEach(function(checkbox) {
-            checkbox.disabled = true;
-            
+            checkbox.disabled = true;            
         });
     } else {
         // Enable all checkboxes

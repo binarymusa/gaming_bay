@@ -1,5 +1,3 @@
-
-
 document.addEventListener('scroll', function(){
     var vagueElements = document.querySelectorAll('#vague');
 

@@ -1,7 +1,6 @@
 
 // wait for page to load
-document.addEventListener('DOMContentLoaded', function(){
-    
+document.addEventListener('DOMContentLoaded', function(){    
     // get the target element(class or id)
     paragraphs.forEach(function(paragraph) {
         var text = paragraph.textContent.trim();

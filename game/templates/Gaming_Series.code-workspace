@@ -37,6 +37,21 @@
 		},
 		{
 			"path": "../../../Dart"
+		},
+		{
+			"path": "../../../UniformStore"
+		},
+		{
+			"path": "../../../javascript"
+		},
+		{
+			"path": "../../../fisrt-prjt"
+		},
+		{
+			"path": "../../../Studystack_app"
+		},
+		{
+			"path": "../../../flaschcard app"
 		}
 	],
 	"settings": {
@@ -56,6 +71,16 @@
 				"password": "5m9l<18>_X!"
 			}
 		],
-		"liveServer.settings.multiRootWorkspaceName": "Gaming_Series"
+		"liveServer.settings.multiRootWorkspaceName": "Gaming_Series",
+		"editor.cursorStyle": "underline",
+		"editor.padding.top": 1,
+		"editor.padding.bottom": 1,
+		"editor.lineNumbers": "interval",
+		"editor.wordWrap": "off",
+		"workbench.activityBar.iconClickBehavior": "toggle",
+		"workbench.activityBar.location": "default",
+		"editor.lineHeight": 1.5,
+		"debug.console.lineHeight": 0,
+		"notebook.output.lineHeight": 0
 	}
 }

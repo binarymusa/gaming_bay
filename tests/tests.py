@@ -1,14 +1,12 @@
 
 # tests/test_routes.py
-
 import unittest
 from game import app,db
 from game.forms import User
 
 class TestRoutes(unittest.TestCase):
-
     """
-    each test must begin with the 'test' name
+    each test method must begin with the 'test' name
     They use assertions to verify expected behavior or outcomes.
     self.app.get('/login'): Sends a GET request to the specified route.
     response.status_code, response.data: Accesses the response status code and data.
@@ -36,14 +34,14 @@ class TestRoutes(unittest.TestCase):
         # Assert that the response data contains the word "Login"
         self.assertIn(b'Login', response.data)
 
-    # follows from the above code
+
     def test_sign_up(self):
         response = self.app.get('/Register')
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Login', response.data)
 
     # Define a test method for testing the booking page without authentication
-    def booking_page_test(self):
+    def test_booking_page(self):
         response = self.app.get('/Bookings')
         # Assert that the response status code is 302 (Redirect)
         self.assertEqual(response.status_code, 302)  # 302 is for redirection
@@ -55,25 +53,25 @@ class TestRoutes(unittest.TestCase):
         """ user = User(username='duke', email_address='duke@hotmail.com', phone_no='0912345678', password_hash='12345')
         db.session.add()
         db.session.commit() """
-
         queried_user = User.query.filter_by(username='duke').first()
 
-        # adding, updating, Deleting items, query
-        if not  queried_user:
-            queried_user = User(username='duke', email_address='duke@hotmail.com', phone_no='0912345678', password_hash='12345')
-            db.session.add(queried_user)
+        if not queried_user:
+            new_user = User(username='duke', 
+                            email_address='duke@hotmail.com', 
+                            phone_no='0912345678', 
+                            password_hash='12345'
+                            )
+            db.session.add(new_user)
             db.session.commit()
         
         else:
-            queried_user.email_addres = 'duke@gmail.com'
-
+            queried_user.email_addresss = 'duke@gmail.com'
             db.session.delete(queried_user)
             db.session.commit()
        
         self.assertIsNotNone(queried_user)
         self.assertEqual(queried_user.email_address, 'duke@hotmail.com')
 
-    
 
 if __name__ == '__main__':
     unittest.main()
